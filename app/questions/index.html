@@ -1,0 +1,33 @@
+<script>
+        function questionSaved() {
+          alert("Questão salva com sucesso!");
+        }
+        function questionDeleted() {
+          alert("Questão removida com sucesso!");
+        }
+</script>
+<h2>Register your question</h2>
+<div class="form-container">
+    <form>
+        <div id="questionContainer" class="form-group">
+            <div id="loadedQuestions" ng-repeat="(key,question) in vm.user.questions">
+                <div class="questionField"> 
+                    <p></p>
+                    <h4>Question</h4>         
+                    <input type="text" id="q{{question.id}}" class="form-control questionTextBox" value="{{question.value}}" readonly/>
+                    <p></p>
+                    <button class="btn btn-danger" ng-click="vm.remove('q'+question.id)" onclick="questionDeleted()">Delete question</button>
+                    <p></p>
+                </div>
+            </div>
+            <div class="questionField">
+                    <input type="text" id="newQuestion" class="form-control questionTextBox"/>
+                    <p></p>
+                    <button class="btn btn-primary" ng-click="vm.add()" onclick="questionSaved()">Save</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+
+
