@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <script>
         function questionSaved() {
           alert("Questão salva com sucesso!");
@@ -31,3 +32,17 @@
 
 
 
+=======
+<h1>Questions</h1>
+<div class="form-container">
+    
+        <div class="form-group">
+            <label for="question">Question</label>
+            <input type="text" id="question" class="form-control" ng-model="vm.question" required />
+        </div>
+        <div class="form-group">
+            <button class="btn btn-primary" ng-click="vm.saveQuestion()">Save</button>
+            <button class="btn btn-danger" ng-click="vm.deleteQuestion()">Delete</button>
+        </div>
+</div>
+>>>>>>> 56bf03d62f532fa312bf882ce49b8a6f471a4635
